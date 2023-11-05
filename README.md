@@ -92,3 +92,12 @@ showVersions         show versions of installed software
 -bash: manpath: command not found
 [gwatts@SurfacePhoto atlas-containers]$
 ```
+
+## Tests
+
+The following have been tested:
+
+* `lsetup rucio` and `rucio.ping`
+* FAIL: `lsetup root xxx` and `root` and then `TBrowser b` - using the default recommended version of `root` when this was last checked!
+  * `root` runs currently in batch mode, but some X11 libraries (?) are missing and `root` isn't telling me which ones.
+* `xclock` works (after installing with `yum install xclock` (this is not normally installed with these scripts).
