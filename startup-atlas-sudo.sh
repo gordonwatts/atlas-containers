@@ -1,2 +1,5 @@
 # Get automount running
-automount
+if ! pgrep -x "automount" > /dev/null
+then
+    automount
+fi
