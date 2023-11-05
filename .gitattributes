@@ -1,0 +1,5 @@
+# Many of these things are linux line endings
+*.sh eol=lf
+sudoers-atlas-setup eol=lf
+default.local eol=lf
+wsl.conf eol=lf
