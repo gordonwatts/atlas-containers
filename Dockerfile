@@ -15,6 +15,7 @@ COPY default.local /etc/cvmfs/default.local
 # Get the startup scripts for ATLAS defined
 RUN mkdir /etc/atlas-cern
 COPY startup-atlas-sudo.sh /etc/atlas-cern/startup-atlas-sudo.sh
+COPY startup-atlas.sh /etc/profile.d
 COPY config-user.sh /etc/atlas-cern/config-user.sh
 COPY sudoers-atlas-setup /etc/sudoers.d/sudoers-atlas-setup
 

@@ -7,6 +7,7 @@ adduser $username
 passwd $username
 
 gpasswd -a $username wheel
+usermod -aG users $username
 
 echo "[user]" >> /etc/wsl.conf
 echo "default=$username" >> /etc/wsl.conf
