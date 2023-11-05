@@ -4,6 +4,7 @@
 
 read -p "Enter username: " username
 adduser $username
+echo "You will be prompted to enter a password for $username."
 passwd $username
 
 gpasswd -a $username wheel
