@@ -5,7 +5,7 @@
 FROM almalinux:9
 
 # Get libraries and utilties installed to run ATLAS software
-RUN yum -y install sudo passwd yum-utils krb5-workstation
+RUN yum -y install sudo passwd yum-utils krb5-workstation openssl
 
 # Add wsl utilities
 RUN yum-config-manager --add-repo https://download.opensuse.org/repositories/home:/wslutilities/RHEL_7/home:wslutilities.repo && yum install -y wslu
