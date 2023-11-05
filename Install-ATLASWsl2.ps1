@@ -1,5 +1,8 @@
-# Make sure we are ready to go!
+# Parameters (eventually the command line)
 $wsl_distro = "atlas_al9"
+$os = "al9"
+
+# Make sure we are ready to go!
 $wsl_distro_exists = (wsl -l | Where-Object { $_ -eq $wsl_distro } | Measure-Object -Line).Lines
 if ($wsl_distro_exists -ge 1) {
     Write-Host "Error: WSL2 distro $wsl_distro exists. Unregister with: wsl --unregister $wsl_distro"
@@ -7,7 +10,7 @@ if ($wsl_distro_exists -ge 1) {
 }
 
 # Build the docker image
-docker build --pull --rm -f "Dockerfile" -t atlascontainers:latest "."
+docker build --pull --rm -f "$os/Dockerfile" -t atlascontainers:latest "."
 
 # Run the docker image with a container name "atlas_al9" and execute a simple "ls":
 $containerName = "atlas_al9"
