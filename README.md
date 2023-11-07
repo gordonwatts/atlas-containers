@@ -110,3 +110,6 @@ The following have been tested:
 * `kinit` and `ssh lxplus.cern.ch` without password for `ssh`.
   * [x] centos7
   * [ ] AL9
+* Build the DiVertAnalysisR21 image using the `gitlab` build script.
+  * [x] centos07
+  * Not clear this is possible on AL9 since this is R21.
