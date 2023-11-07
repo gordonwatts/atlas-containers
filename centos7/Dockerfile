@@ -7,6 +7,12 @@ FROM centos:7
 # Get libraries and utilties installed to run ATLAS software
 RUN yum -y install sudo passwd yum-utils krb5-workstation openssl man-db libXft libSM patch
 
+# Some missing python libraries
+RUN yum -y install epel-release
+RUN yum -y install python-pip
+RUN pip2 install --upgrade pip
+RUN pip2 install argcomplete
+
 # # Add wsl utilities
 RUN yum-config-manager --add-repo https://download.opensuse.org/repositories/home:/wslutilities/RHEL_7/home:wslutilities.repo && yum install -y wslu
 
