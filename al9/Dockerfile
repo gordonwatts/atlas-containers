@@ -5,7 +5,8 @@
 FROM almalinux:9
 
 # Get libraries and utilties installed to run ATLAS software
-RUN yum -y install sudo passwd yum-utils krb5-workstation openssl man-db libXft libSM patch
+RUN yum -y install sudo passwd yum-utils krb5-workstation openssl man-db
+RUN YUM -y libXft libSM patch cmake make g++ uuid python3 libcap pkg-config valgrind unzip nano 
 
 # Add wsl utilities
 RUN yum-config-manager --add-repo https://download.opensuse.org/repositories/home:/wslutilities/RHEL_7/home:wslutilities.repo && yum install -y wslu
@@ -17,7 +18,7 @@ COPY default.local /etc/cvmfs/default.local
 
 # Libraries, etc., needed for ATLAS software
 RUN yum install -y https://linuxsoft.cern.ch/wlcg/el9/x86_64/wlcg-repo-1.0.0-1.el9.noarch.rpm
-# && yum install -y HEP_OSlibs
+RUN yum install -y HEP_OSlibs glibc-langpack
 
 # Get the startup scripts for ATLAS defined
 RUN mkdir /etc/atlas-cern
@@ -28,3 +29,8 @@ COPY sudoers-atlas-setup /etc/sudoers.d/sudoers-atlas-setup
 
 # And WSL config
 COPY wsl.conf /etc/wsl.conf
+
+# Finally, get it all up to date, clean everything, and get fresh copies of the mirror data
+RUN yum update -y
+RUN yum clean all
+RUN yum update -y

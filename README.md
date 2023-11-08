@@ -101,8 +101,9 @@ The following have been tested:
   * [x] centos7
   * [ ] AL9
 * `lsetup root xxx` and `root` and then `TBrowser b` - using the default recommended version of `root` when this was last checked!
-  * [ ] centos7
-    * `root` runs currently in batch mode, but some X11 libraries (?) are missing and `root` isn't telling me which ones, so no windows ever pop us.
+  * [x] centos7
+    * The X Windows just works with no further config (note you must start current root with `root --web=off` for this to work).
+    * The web browser seems version starts ok, though `wslutils` gives a syntax error ([bug report](https://github.com/wslutilities/wslu/issues/294)).
   * [ ] AL9
 * `xclock` works (after installing with `yum install xclock` (this is not normally installed with these scripts).
   * [x] centos7
