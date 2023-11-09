@@ -1,9 +1,11 @@
-# Parameters (eventually the command line)
-# $containerName = "atlas_al9"
-$containerName = "atlas_centos7"
+param(
+    [Parameter(Mandatory = $true)]
+    [string]$containerName,
+
+    [ValidateSet('centos7', 'al9')]
+    [string]$os = 'centos7'
+)
 $wsl_distro = $containerName
-# $os = "al9"
-$os = "centos7"
 
 # Make sure we are ready to go!
 $wsl_distro_exists = (wsl -l | Where-Object { $_ -eq $wsl_distro } | Measure-Object -Line).Lines
