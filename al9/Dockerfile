@@ -18,7 +18,7 @@ COPY default.local /etc/cvmfs/default.local
 
 # Libraries, etc., needed for ATLAS software
 RUN yum install -y https://linuxsoft.cern.ch/wlcg/el9/x86_64/wlcg-repo-1.0.0-1.el9.noarch.rpm
-RUN yum install -y HEP_OSlibs glibc-langpack
+RUN dnf --enablerepo=crb install -y HEP_OSlibs
 
 # Get the startup scripts for ATLAS defined
 RUN mkdir /etc/atlas-cern
