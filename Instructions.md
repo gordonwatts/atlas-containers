@@ -17,6 +17,7 @@ Step-by-step:
     * [ATLAS AlmaLinux 9](https://cernbox.cern.ch/s/v0IQC5x0O5hs87N): Download the 400 MB zipped image here
     * These images correspond to the v1.0 tag.
 1. Unzip the image.
+    * Locate the resulting unzipped `.tar` file for use in the next step.
 1. Install the image in the wsl2 with `wsl --import --version 2 atlas_xxx $env:USERPROFILE\AppData\Local\Programs\atlas_xxx distro.tar`
     * Replace `atlas_xxx` with whatever you'd like to label this wsl2 distro as (e.g. `atlas_centos7``),
     * Replace `distro.tar` with whatever the unzipped downloaded file is.
