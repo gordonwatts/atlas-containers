@@ -5,7 +5,7 @@
 FROM almalinux:9
 
 # Get libraries and utilties installed to run ATLAS software
-RUN yum -y install sudo passwd yum-utils krb5-workstation openssl man-db
+RUN yum -y install sudo passwd yum-utils krb5-workstation openssl man-db xdg-utils
 RUN yum -y install libXft libSM patch cmake make g++ uuid python3 libcap pkg-config valgrind unzip nano 
 
 # Add wsl utilities
