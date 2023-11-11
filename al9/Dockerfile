@@ -5,8 +5,7 @@
 FROM almalinux:9
 
 # Get libraries and utilties installed to run ATLAS software
-RUN yum -y install sudo passwd yum-utils krb5-workstation openssl man-db xdg-utils && yum clean all
-RUN yum -y install libXft libSM patch cmake make g++ uuid python3 libcap pkg-config valgrind unzip nano && yum clean all
+RUN yum -y install sudo passwd yum-utils krb5-workstation openssl man-db xdg-utils libXft libSM patch cmake make g++ uuid python3 libcap pkg-config valgrind unzip nano && yum clean all
 
 # Add wsl utilities
 RUN yum-config-manager --add-repo https://download.opensuse.org/repositories/home:/wslutilities/RHEL_7/home:wslutilities.repo && yum install -y wslu && yum clean all
