@@ -8,7 +8,7 @@ Follow the below instructions to download, install, and configure the images.
 
 Prerequisites:
 
-* WSL2 is installed and working (e.g. run `wsl --update` from your command line)
+* WSL2 is installed and working (e.g. run `wsl --update` from your command line). You should be passingly familiar with how `wsl2` works.
 
 Step-by-step:
 
@@ -18,7 +18,7 @@ Step-by-step:
     * These images correspond to the v1.0 tag.
 1. Unzip the image.
     * Locate the resulting unzipped `.tar` file for use in the next step.
-1. Install the image in the wsl2 with `wsl --import --version 2 atlas_xxx $env:USERPROFILE\AppData\Local\Programs\atlas_xxx distro.tar`
+1. In a normal terminal/console window running PowerShell, install the image in the wsl2 with `wsl --import --version 2 atlas_xxx $env:USERPROFILE\AppData\Local\Programs\atlas_xxx distro.tar`
     * Replace `atlas_xxx` with whatever you'd like to label this wsl2 distro as (e.g. `atlas_centos7``),
     * Replace `distro.tar` with whatever the unzipped downloaded file is.
     * The location of the virtual disk (`$env:USERPROFILE\AppData\Local\Programs\atlas_xxx` here) can be any valid location. If you have many disks on your system you might keep it off your system disk - it can get rather large.
