@@ -5,7 +5,7 @@
 FROM almalinux:9
 
 # Get libraries and utilties installed to run ATLAS software
-RUN yum -y install sudo passwd yum-utils krb5-workstation openssl man-db
+RUN yum -y install sudo passwd yum-utils krb5-workstation openssl man-db xdg-utils
 RUN yum -y install libXft libSM patch cmake make g++ uuid python3 libcap pkg-config valgrind unzip nano 
 
 # Add wsl utilities
@@ -18,7 +18,7 @@ COPY default.local /etc/cvmfs/default.local
 
 # Libraries, etc., needed for ATLAS software
 RUN yum install -y https://linuxsoft.cern.ch/wlcg/el9/x86_64/wlcg-repo-1.0.0-1.el9.noarch.rpm
-RUN yum install -y HEP_OSlibs glibc-langpack
+RUN dnf --enablerepo=crb install -y HEP_OSlibs
 
 # Get the startup scripts for ATLAS defined
 RUN mkdir /etc/atlas-cern
