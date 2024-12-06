@@ -14,7 +14,8 @@ Step-by-step:
 
 1. Download the image
     * [ATLAS CENTOS7](https://cernbox.cern.ch/s/uN8y5PH1BEEnvOw): Download the 400MB zipped image here
-    * [ATLAS AlmaLinux 9](https://cernbox.cern.ch/s/v0IQC5x0O5hs87N): Download the 400 MB zipped image here
+    * [ATLAS AlmaLinux 9 - x86](https://cernbox.cern.ch/s/v0IQC5x0O5hs87N): Download the 400 MB zipped image here
+    * [ALTAS AlmaLinux 9 - ARM](https://cernbox.cern.ch/s/CmiF3h5y7jvFuav): Download the 400 MB zipped image here.
     * These images correspond to the v1.0 tag.
 1. Unzip the image.
     * Locate the resulting unzipped `.tar` file for use in the next step.
